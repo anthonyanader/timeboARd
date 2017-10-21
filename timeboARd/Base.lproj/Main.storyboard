@@ -32,13 +32,33 @@
                     <view key="view" contentMode="scaleToFill" id="FvE-Ot-5iE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqp-Oj-sKz">
+                                <rect key="frame" x="113" y="545" width="149" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="KYp-4c-TS1"/>
+                                    <constraint firstAttribute="height" constant="30" id="TGe-Ij-Nbg"/>
+                                </constraints>
+                                <state key="normal" title="Login using Facebook"/>
+                                <connections>
+                                    <action selector="facebookLoginWithSender:" destination="QEb-AT-uUH" eventType="touchUpInside" id="NaP-I6-ADz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jqp-Oj-sKz" firstAttribute="centerY" secondItem="wjT-EI-98B" secondAttribute="centerY" id="Q9N-AT-5Jt"/>
+                            <constraint firstItem="Jqp-Oj-sKz" firstAttribute="centerY" secondItem="wjT-EI-98B" secondAttribute="centerY" id="SAL-zR-5pZ"/>
+                            <constraint firstItem="Jqp-Oj-sKz" firstAttribute="centerY" secondItem="wjT-EI-98B" secondAttribute="centerY" id="Upk-Fr-tyr"/>
+                            <constraint firstItem="Jqp-Oj-sKz" firstAttribute="centerY" secondItem="wjT-EI-98B" secondAttribute="centerY" id="WcT-eP-xbj"/>
+                            <constraint firstItem="Jqp-Oj-sKz" firstAttribute="centerX" secondItem="wjT-EI-98B" secondAttribute="centerX" id="uJc-Fu-qkv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wjT-EI-98B"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cH-MF-2pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-962" y="-73"/>
+            <point key="canvasLocation" x="-962.39999999999998" y="-73.313343328335833"/>
         </scene>
     </scenes>
 </document>

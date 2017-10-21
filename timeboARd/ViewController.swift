@@ -19,7 +19,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
+        self.becomeFirstResponder() // To get shake gesture
         // Show statistics such as fps and node count
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
@@ -27,6 +27,20 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Load the SKScene from 'Scene.sks'
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("Why are you shaking me?")
+            sceneView.session.run(sceneView.session.configuration!, options: .removeExistingAnchors)
         }
     }
     
@@ -66,8 +80,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Create the geometry and its materials
         let url = URL(string: "https://static.pexels.com/photos/127028/pexels-photo-127028.jpeg")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        var theImage = UIImage(data: data!)
-        let scaledImage = resizeImage(image: theImage!, newWidth: 50)
+        let theImage = UIImage(data: data!)
+        let scaledImage = resizeImage(image: theImage!, newWidth: 75)
         let Texture = SKTexture(image: scaledImage)
         return SKSpriteNode(texture: Texture)
     }

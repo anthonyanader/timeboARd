@@ -28,20 +28,21 @@ class Scene: SKScene {
         // Get the first touch location on screen
         if let touchLocation = touches.first?.location(in: sceneView) {
             
-            
-            // Create anchor using the camera's current position
-            if let currentFrame = sceneView.session.currentFrame {
-                
-                // Create a transform with a translation of 0.2 meters in front of the camera
-                var translation = matrix_identity_float4x4
-                translation.columns.3.z = -1
-                let transform = simd_mul(currentFrame.camera.transform, translation)
-                
-                // Add a new anchor to the session
-                let anchor = ARAnchor(transform: transform)
-                sceneView.session.add(anchor: anchor)
+            if anchors.count < 2 {
+                // Create anchor using the camera's current position
+                if let currentFrame = sceneView.session.currentFrame {
+                    
+                    // Create a transform with a translation of 0.2 meters in front of the camera
+                    var translation = matrix_identity_float4x4
+                    translation.columns.3.z = -1
+                    let transform = simd_mul(currentFrame.camera.transform, translation)
+                    
+                    // Add a new anchor to the session
+                    let anchor = ARAnchor(transform: transform)
+                    sceneView.session.add(anchor: anchor)
+                    anchors.append(anchor)
+                }
             }
-            
         }
     }
 }
