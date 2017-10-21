@@ -41,6 +41,7 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
     // Non - Picker Delegate
     
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var gestureRegionView: UIView!
     
     var dotNodes = [SCNNode]()
     var textNode = SCNNode()
@@ -54,6 +55,11 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         self.becomeFirstResponder() // To get shake gesture
+        
+        let swipeUpGC = UISwipeGestureRecognizer(target: self, action: #selector(MasterVC.didSwipeUp))
+        swipeUpGC.direction = UISwipeGestureRecognizerDirection.up
+        gestureRegionView.addGestureRecognizer(swipeUpGC)
+        
         
     }
     
@@ -253,6 +259,13 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         // again convert your date to string
         let myStringafd = formatter.string(from: yourDate!)
         return myStringafd
+    }
+    
+    @objc func didSwipeUp() {
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TimeMachineViewController") {
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
 }
