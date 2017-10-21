@@ -8,4 +8,12 @@ target 'timeboARd' do
   # Pods for timeboARd
   pod 'AFNetworking', '~> 2.6'
   pod 'ORStackView', '~> 3.0'
+  
+  # Firebase
+  pod 'Firebase', '2.5.1'
+  
+  # Facebook
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
 end
