@@ -14,6 +14,7 @@
 		923B54741F9AE832004A45AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54731F9AE832004A45AA /* ViewController.swift */; };
 		923B54771F9AE832004A45AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B54751F9AE832004A45AA /* Main.storyboard */; };
 		923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */; };
+		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
+		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */,
 				923B547D1F9AE832004A45AA /* Info.plist */,
 				BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */,
+				AC2472961F9B9E0200D09427 /* MasterVC.swift */,
 			);
 			path = timeboARd;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
+				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
 				923B54741F9AE832004A45AA /* ViewController.swift in Sources */,
 				923B54721F9AE832004A45AA /* Scene.swift in Sources */,
 				923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */,
