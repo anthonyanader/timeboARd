@@ -168,7 +168,7 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func takePhoto() {
-        let ciImage = CIImage(cvPixelBuffer: sceneView.session.currentFrame?.capturedImage)
+        let ciImage = CIImage(cvPixelBuffer: (sceneView.session.currentFrame?.capturedImage)!)
         let context = CIContext(options: nil)
         let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
         let image = UIImage(cgImage: cgImage!)
@@ -177,7 +177,7 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
             try? data.write(to: filename)
         }
         
-        self.uploadImage(getDocumentsDirectory().appendingPathComponent("screenshot.png"))
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshot.png"))
     }
     
     func getDocumentsDirectory() -> URL {
@@ -185,8 +185,8 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         return paths[0]
     }
     
-    func uploadImage(filePath: String) -> StorageUploadTask {
-        let localFile = URL(string: filePath)!
+    func uploadImage(localFile: URL) -> StorageUploadTask {
+        let storageRef = Storage.storage().reference()
         let gcsRef = storageRef.child("whiteboards/w_0.jpg")
         var downloadURL: URL! // pre-declaration for var scoping
         
