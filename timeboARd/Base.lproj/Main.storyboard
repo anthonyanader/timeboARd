@@ -115,6 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="JOy-jS-AzK"/>
                     </view>
                     <connections>
+                        <outlet property="gestureRegionView" destination="ieO-iG-n5i" id="ynj-h5-xZb"/>
                         <outlet property="sceneView" destination="pBG-Pj-KfE" id="4E2-KO-ffL"/>
                     </connections>
                 </viewController>
