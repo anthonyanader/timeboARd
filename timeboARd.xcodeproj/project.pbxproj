@@ -11,7 +11,6 @@
 		923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B546D1F9AE832004A45AA /* AppDelegate.swift */; };
 		923B54701F9AE832004A45AA /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923B546F1F9AE832004A45AA /* Scene.sks */; };
 		923B54721F9AE832004A45AA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54711F9AE832004A45AA /* Scene.swift */; };
-		923B54741F9AE832004A45AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54731F9AE832004A45AA /* ViewController.swift */; };
 		923B54771F9AE832004A45AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B54751F9AE832004A45AA /* Main.storyboard */; };
 		923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */; };
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
@@ -25,7 +24,6 @@
 		923B546D1F9AE832004A45AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		923B546F1F9AE832004A45AA /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		923B54711F9AE832004A45AA /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
-		923B54731F9AE832004A45AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		923B54761F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 				923B546D1F9AE832004A45AA /* AppDelegate.swift */,
 				923B546F1F9AE832004A45AA /* Scene.sks */,
 				923B54711F9AE832004A45AA /* Scene.swift */,
-				923B54731F9AE832004A45AA /* ViewController.swift */,
 				923B54751F9AE832004A45AA /* Main.storyboard */,
 				923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */,
 				BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */,
@@ -250,7 +247,6 @@
 			files = (
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
 				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
-				923B54741F9AE832004A45AA /* ViewController.swift in Sources */,
 				923B54721F9AE832004A45AA /* Scene.swift in Sources */,
 				923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */,
 			);
