@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46640350C73884E4BA6EDB00 /* Pods_timeboARd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370543F4C62E015E6F609B6 /* Pods_timeboARd.framework */; };
 		923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B546D1F9AE832004A45AA /* AppDelegate.swift */; };
 		923B54701F9AE832004A45AA /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923B546F1F9AE832004A45AA /* Scene.sks */; };
 		923B54721F9AE832004A45AA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54711F9AE832004A45AA /* Scene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1370543F4C62E015E6F609B6 /* Pods_timeboARd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timeboARd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923B546A1F9AE832004A45AA /* timeboARd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeboARd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923B546D1F9AE832004A45AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		923B546F1F9AE832004A45AA /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		923B54781F9AE832004A45AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
+		C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46640350C73884E4BA6EDB00 /* Pods_timeboARd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E6506B8D7681B5512D5E17F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1370543F4C62E015E6F609B6 /* Pods_timeboARd.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		923B54611F9AE832004A45AA = {
 			isa = PBXGroup;
 			children = (
 				923B546C1F9AE832004A45AA /* timeboARd */,
 				923B546B1F9AE832004A45AA /* Products */,
+				E9AB6426D387C73BB773E016 /* Pods */,
+				6E6506B8D7681B5512D5E17F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = timeboARd;
 			sourceTree = "<group>";
 		};
+		E9AB6426D387C73BB773E016 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */,
+				9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 923B54801F9AE832004A45AA /* Build configuration list for PBXNativeTarget "timeboARd" */;
 			buildPhases = (
+				1589BEA0CE3747FDDE9C86DE /* [CP] Check Pods Manifest.lock */,
 				923B54661F9AE832004A45AA /* Sources */,
 				923B54671F9AE832004A45AA /* Frameworks */,
 				923B54681F9AE832004A45AA /* Resources */,
+				522DEA509197B9C94E873394 /* [CP] Embed Pods Frameworks */,
+				BC9664D419A27E393F8B407B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1589BEA0CE3747FDDE9C86DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timeboARd-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		522DEA509197B9C94E873394 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLKAutoLayout/FLKAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLKAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORStackView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9664D419A27E393F8B407B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		923B54661F9AE832004A45AA /* Sources */ = {
@@ -280,6 +367,7 @@
 		};
 		923B54811F9AE832004A45AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +383,7 @@
 		};
 		923B54821F9AE832004A45AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
