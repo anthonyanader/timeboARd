@@ -22,7 +22,4 @@ target 'timeboARd' do
 
   # Animations
   pod "ViewAnimator"
-  
-  # Scanner
-  pod "PKCCrop"
 end
