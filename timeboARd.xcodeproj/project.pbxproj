@@ -20,6 +20,7 @@
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
 		AC3F96651F9BFB5000F9580B /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F96641F9BFB5000F9580B /* MoviePoster.swift */; };
 		AC3F96671F9BFB7900F9580B /* MoviePoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3F96661F9BFB7900F9580B /* MoviePoster.xib */; };
+		AC3F966B1F9C005200F9580B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3F966A1F9C005200F9580B /* Images.xcassets */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
 		BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */; };
@@ -42,6 +43,7 @@
 		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		AC3F96641F9BFB5000F9580B /* MoviePoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
 		AC3F96661F9BFB7900F9580B /* MoviePoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePoster.xib; sourceTree = "<group>"; };
+		AC3F966A1F9C005200F9580B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudStorageHelper.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */,
 				AC2472961F9B9E0200D09427 /* MasterVC.swift */,
 				BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */,
+				AC3F966A1F9C005200F9580B /* Images.xcassets */,
 			);
 			path = timeboARd;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923B54701F9AE832004A45AA /* Scene.sks in Resources */,
+				AC3F966B1F9C005200F9580B /* Images.xcassets in Resources */,
 				AC3F96671F9BFB7900F9580B /* MoviePoster.xib in Resources */,
 				BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */,
 				923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */,
@@ -419,6 +423,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R57NWZM462;
 				INFOPLIST_FILE = timeboARd/Info.plist;
@@ -434,6 +440,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R57NWZM462;
 				INFOPLIST_FILE = timeboARd/Info.plist;
