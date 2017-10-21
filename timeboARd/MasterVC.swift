@@ -18,26 +18,6 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
     var textNode = SCNNode()
     var planeNode = SCNNode()
     
-    @objc func onDoubleTap() {
-        print ("Double Tapped!")
-    }
-    
-    @objc func onSwipeRight() {
-        print ("Swiped Right!")
-    }
-    
-    @objc func onSwipeLeft() {
-        print ("Swiped Left!")
-    }
-    
-    @objc func onSwipeUp() {
-        print ("Swiped Up!")
-    }
-    
-    @objc func onSwipeDown() {
-        print ("Swiped Down!")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,31 +26,6 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         
         sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         self.becomeFirstResponder() // To get shake gesture
-        
-        // Add double tap GR
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(MasterVC.onDoubleTap))
-        tapGR.numberOfTapsRequired = 2
-        sceneView.addGestureRecognizer(tapGR)
-        
-        // Add Swipe Left GR
-        let swipeLeftGR = UISwipeGestureRecognizer(target: self, action: #selector(MasterVC.onSwipeLeft))
-        swipeLeftGR.direction = UISwipeGestureRecognizerDirection.left
-        sceneView.addGestureRecognizer(swipeLeftGR)
-        
-        // Add Swipe Right GR
-        let swipeRightGR = UISwipeGestureRecognizer(target: self, action: #selector(MasterVC.onSwipeRight))
-        swipeRightGR.direction = UISwipeGestureRecognizerDirection.right
-        sceneView.addGestureRecognizer(swipeRightGR)
-        
-        // Add Swipe Up GR
-        let swipeUpGR = UISwipeGestureRecognizer(target: self, action: #selector(MasterVC.onSwipeUp))
-        swipeUpGR.direction = UISwipeGestureRecognizerDirection.up
-        sceneView.addGestureRecognizer(swipeUpGR)
-        
-        // Add Swipe Down GR
-        let swipeDownGR = UISwipeGestureRecognizer(target: self, action: #selector(MasterVC.onSwipeDown))
-        swipeDownGR.direction = UISwipeGestureRecognizerDirection.down
-        sceneView.addGestureRecognizer(swipeDownGR)
         
     }
     
@@ -103,10 +58,13 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         if let touchLocation = touches.first?.location(in: sceneView) {
             let hitTestResults = sceneView.hitTest(touchLocation, types: .featurePoint)
             
-            if let hitResult = hitTestResults.first {
-                addDot(at: hitResult)
+            if dotNodes.count > 2 {
+                sceneView.session.pause()
+            }else{
+                if let hitResult = hitTestResults.first {
+                    addDot(at: hitResult)
+                }
             }
-            
         }
     }
     
@@ -180,7 +138,8 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         let url = URL(string: "https://static.pexels.com/photos/127028/pexels-photo-127028.jpeg")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         let theImage = UIImage(data: data!)
-        planeGeometry.firstMaterial?.diffuse.contents = theImage
+        let flippedImage = theImage?.imageFlippedForRightToLeftLayoutDirection()
+        planeGeometry.firstMaterial?.diffuse.contents = flippedImage
         
         planeNode = SCNNode(geometry: planeGeometry)
         
