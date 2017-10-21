@@ -1,3 +1,5 @@
 timeboARd.xcworkspace
 timeboARd.xcodeproj
 Podfile.lock
+
+.DS_Store
