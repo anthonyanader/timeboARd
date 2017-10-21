@@ -113,6 +113,26 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
+    }
+    
+    @IBAction func topSwipeGesture(_ sender: UIScreenEdgePanGestureRecognizer) {
         
+        print("blue")
+    }
+    
+    @IBAction func leftSwipeGesture(_ sender: UIScreenEdgePanGestureRecognizer) {
+        
+        print("yellow")
+        
+    }
+    
+    @IBAction func rightSwipGesture(_ sender: UIScreenEdgePanGestureRecognizer) {
+    
+        print("green")
+    }
+    
+    @IBAction func bottomSwipeGesture(_ sender: UIScreenEdgePanGestureRecognizer) {
+        
+        print("red")
     }
 }

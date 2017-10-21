@@ -9,6 +9,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SettingsViewController-->
+        <scene sceneID="RQ5-dU-VuO">
+            <objects>
+                <viewController title="SettingsViewController" id="g4O-QO-dVL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kch-LH-Qem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="liE-Og-FLX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4g-tI-5Qj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-959" y="-73"/>
+        </scene>
+        <!--SaveBoardViewController-->
+        <scene sceneID="fMh-Sm-ga5">
+            <objects>
+                <viewController title="SaveBoardViewController" id="ywR-ED-MFA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nx1-tf-ecs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.96850053121695545" blue="0.49986214138487428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PbW-pU-ax2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJY-6d-wtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="-735"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -16,14 +46,76 @@
                     <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="9LE-LW-3aU"/>
+                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="gXh-dO-tx6"/>
+                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="3gb-uo-5A0"/>
+                            <outletCollection property="gestureRecognizers" destination="NC7-On-2Nu" appends="YES" id="rR5-FG-sQK"/>
+                            <outletCollection property="gestureRecognizers" destination="4R8-kJ-kLv" appends="YES" id="gmB-fH-Vf9"/>
+                        </connections>
                     </arskView>
                     <connections>
                         <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Fkk-Nv-RPM">
+                    <rectEdge key="edges" top="YES"/>
+                    <connections>
+                        <action selector="topSwipeGesture:" destination="BV1-FR-VrT" id="hdf-vo-mLc"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="NC7-On-2Nu">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="leftSwipeGesture:" destination="BV1-FR-VrT" id="JHA-ck-EQ3"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ZNE-99-VUd">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="rightSwipGesture:" destination="BV1-FR-VrT" id="cdO-yo-aeq"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="4R8-kJ-kLv">
+                    <rectEdge key="edges" bottom="YES"/>
+                    <connections>
+                        <action selector="bottomSwipeGesture:" destination="BV1-FR-VrT" id="3Nd-uZ-Dlv"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-90" y="-54"/>
+            <point key="canvasLocation" x="-263" y="-73"/>
+        </scene>
+        <!--ShareAndCollaborateViewController-->
+        <scene sceneID="c6b-GO-m3q">
+            <objects>
+                <viewController title="ShareAndCollaborateViewController" id="Et4-TR-Vze" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aHX-6Z-uJG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7KN-TF-Bgf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEg-Fi-BGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="-73"/>
+        </scene>
+        <!--TimeMachineViewController-->
+        <scene sceneID="qlg-N6-Dok">
+            <objects>
+                <viewController title="TimeMachineViewController" id="ThC-r1-1oW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shd-eJ-sej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xMc-bI-85O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpT-QM-lDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="589"/>
         </scene>
         <!--MasterVC-->
         <scene sceneID="Nvv-4F-FGo">
@@ -82,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cH-MF-2pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-962.39999999999998" y="-73.313343328335833"/>
+            <point key="canvasLocation" x="-2094" y="-73"/>
         </scene>
     </scenes>
 </document>
