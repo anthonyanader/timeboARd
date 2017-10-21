@@ -10,7 +10,7 @@ import SpriteKit
 import ARKit
 
 class Scene: SKScene {
-    
+    var anchors: [ARAnchor] = []
     override func didMove(to view: SKView) {
         // Setup your scene here
     }
@@ -24,17 +24,34 @@ class Scene: SKScene {
             return
         }
         
-        // Create anchor using the camera's current position
-        if let currentFrame = sceneView.session.currentFrame {
+        
+        // Get the first touch location on screen
+        if let touchLocation = touches.first?.location(in: sceneView) {
             
-            // Create a transform with a translation of 0.2 meters in front of the camera
-            var translation = matrix_identity_float4x4
-            translation.columns.3.z = -0.2
-            let transform = simd_mul(currentFrame.camera.transform, translation)
-            
-            // Add a new anchor to the session
-            let anchor = ARAnchor(transform: transform)
-            sceneView.session.add(anchor: anchor)
+            // Prevent more than 4 anchor points
+            if anchors.count < 4 {
+                
+                // Perform hit-test against all feature points
+                if let hit = sceneView.hitTest(touchLocation, types: .featurePoint).first {
+                    
+                    // Add new anchor to AR session
+                    sceneView.session.add(anchor: ARAnchor(transform: hit.worldTransform))
+                    anchors.append(ARAnchor(transform: hit.worldTransform))
+                }
+            }
         }
+        //
+        //        // Create anchor using the camera's current position
+        //        if let currentFrame = sceneView.session.currentFrame {
+        //
+        //            // Create a transform with a translation of 0.2 meters in front of the camera
+        //            var translation = matrix_identity_float4x4
+        //            translation.columns.3.z = -1
+        //            let transform = simd_mul(currentFrame.camera.transform, translation)
+        //
+        //            // Add a new anchor to the session
+        //            let anchor = ARAnchor(transform: transform)
+        //            sceneView.session.add(anchor: anchor)
+        //        }
     }
 }
