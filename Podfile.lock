@@ -83,6 +83,7 @@ PODS:
   - nanopb/encode (0.3.8)
   - ORStackView (3.0.1):
     - FLKAutoLayout (~> 0.2)
+  - PKCCrop (0.2.4)
   - ViewAnimator (1.0.1)
 
 DEPENDENCIES:
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - ORStackView (~> 3.0)
+  - PKCCrop
   - ViewAnimator
 
 SPEC CHECKSUMS:
@@ -115,8 +117,13 @@ SPEC CHECKSUMS:
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ORStackView: a1bb52748cd0ae29891c140baf22ff8972fb363c
+  PKCCrop: ffee8530f35380fd69e562eb40ea2536a6c0a5cf
   ViewAnimator: a094d13bc86e868e908d33e524fcb58a4ddcf98e
 
+<<<<<<< Updated upstream
 PODFILE CHECKSUM: 98e66d1b96d864d827d960e6cda1aeb7862c03d1
+=======
+PODFILE CHECKSUM: 5bd550c52ef6d9b0e04630cb62264c7b62972356
+>>>>>>> Stashed changes
 
 COCOAPODS: 1.3.1

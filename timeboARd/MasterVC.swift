@@ -11,8 +11,25 @@ import SceneKit
 import ARKit
 import Firebase
 import FirebaseStorage
+import PKCCrop
 
-class MasterVC: UIViewController, ARSCNViewDelegate {
+class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
+    func pkcCropCancel(_ viewController: PKCCropViewController) {
+        
+    }
+    
+    func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
+        if let data = UIImagePNGRepresentation(image!) {
+            let filename = getDocumentsDirectory().appendingPathComponent("screenshotB.png")
+            try? data.write(to: filename)
+        }
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotB.png"))
+    }
+    
+    func pkcCropComplete(_ viewController: PKCCropViewController) {
+         //self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshot.png"))
+    }
+    
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -177,7 +194,13 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
             try? data.write(to: filename)
         }
         
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshot.png"))
+       
+        PKCCropHelper.shared.degressBeforeImage = UIImage(named: "pkc_crop_rotate_left.png")
+        PKCCropHelper.shared.degressAfterImage = UIImage(named: "pkc_crop_rotate_right.png")
+        PKCCropHelper.shared.isNavigationBarShow = false
+        let cropVC = PKCCrop().cropViewController(image)
+        cropVC.delegate = self
+        self.present(cropVC, animated: true, completion: nil)
     }
     
     func getDocumentsDirectory() -> URL {
