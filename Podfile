@@ -10,7 +10,8 @@ target 'timeboARd' do
   pod 'ORStackView', '~> 3.0'
   
   # Firebase
-  pod 'Firebase', '2.5.1'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
   
   # Facebook
   pod 'Bolts'
