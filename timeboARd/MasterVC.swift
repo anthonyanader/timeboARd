@@ -9,6 +9,8 @@
 import UIKit
 import SceneKit
 import ARKit
+import Firebase
+import FirebaseStorage
 
 class MasterVC: UIViewController, ARSCNViewDelegate {
     
@@ -165,6 +167,45 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         }
     }
     
+    @IBAction func takePhoto() {
+        let ciImage = CIImage(cvPixelBuffer: sceneView.session.currentFrame?.capturedImage)
+        let context = CIContext(options: nil)
+        let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
+        let image = UIImage(cgImage: cgImage!)
+        if let data = UIImagePNGRepresentation(image) {
+            let filename = getDocumentsDirectory().appendingPathComponent("screenshot.png")
+            try? data.write(to: filename)
+        }
+        
+        self.uploadImage(getDocumentsDirectory().appendingPathComponent("screenshot.png"))
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func uploadImage(filePath: String) -> StorageUploadTask {
+        let localFile = URL(string: filePath)!
+        let gcsRef = storageRef.child("whiteboards/w_0.jpg")
+        var downloadURL: URL! // pre-declaration for var scoping
+        
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/png"
+        
+        
+        let uploadTask = gcsRef.putFile(from: localFile, metadata: nil) { metadata, error in
+            if let error = error {
+                // TODO: Handle error.
+                print (error)
+            } else {
+                // Metadata contains file metadata such as size, content-type, and download URL.
+                downloadURL = metadata!.downloadURL()
+            }
+        }
+        
+        return uploadTask // documentation of uploadTask object: https://firebase.google.com/docs/storage/ios/upload-files
+    }
 }
 
 

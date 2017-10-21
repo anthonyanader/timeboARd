@@ -100,6 +100,9 @@
                                         <rect key="frame" x="137" y="38" width="101" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhoto" destination="uqH-LS-lhJ" eventType="touchUpInside" id="5vS-SH-isi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -20,6 +20,7 @@
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
+		BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudStorageHelper.swift; sourceTree = "<group>"; };
 		C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 				BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */,
 				926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */,
 				AC2472961F9B9E0200D09427 /* MasterVC.swift */,
+				BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */,
 			);
 			path = timeboARd;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
 				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
 				926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */,
+				BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */,
 				926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */,
 				926D6C1B1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift in Sources */,
 				923B54721F9AE832004A45AA /* Scene.swift in Sources */,
