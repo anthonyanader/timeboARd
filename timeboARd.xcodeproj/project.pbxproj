@@ -13,6 +13,10 @@
 		923B54721F9AE832004A45AA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54711F9AE832004A45AA /* Scene.swift */; };
 		923B54771F9AE832004A45AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B54751F9AE832004A45AA /* Main.storyboard */; };
 		923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */; };
+		926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */; };
+		926D6C1B1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1A1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift */; };
+		926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */; };
+		926D6C1F1F9BC3A60021F37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */; };
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
@@ -27,6 +31,10 @@
 		923B54761F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBoardViewController.swift; sourceTree = "<group>"; };
+		926D6C1A1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAndCollaborateViewController.swift; sourceTree = "<group>"; };
+		926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMachineViewController.swift; sourceTree = "<group>"; };
+		926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
 		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +86,15 @@
 				923B546D1F9AE832004A45AA /* AppDelegate.swift */,
 				923B546F1F9AE832004A45AA /* Scene.sks */,
 				923B54711F9AE832004A45AA /* Scene.swift */,
+				926D6C1A1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift */,
+				926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */,
+				926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */,
 				923B54751F9AE832004A45AA /* Main.storyboard */,
 				923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */,
 				BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */,
 				923B547D1F9AE832004A45AA /* Info.plist */,
 				BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */,
+				926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */,
 				AC2472961F9B9E0200D09427 /* MasterVC.swift */,
 			);
 			path = timeboARd;
@@ -247,8 +259,12 @@
 			files = (
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
 				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
+				926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */,
+				926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */,
+				926D6C1B1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift in Sources */,
 				923B54721F9AE832004A45AA /* Scene.swift in Sources */,
 				923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */,
+				926D6C1F1F9BC3A60021F37A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,9 +401,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R57NWZM462;
+				DEVELOPMENT_TEAM = 7FH7F6J6R6;
 				INFOPLIST_FILE = timeboARd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeboARd.timeboARd;
@@ -401,9 +416,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R57NWZM462;
+				DEVELOPMENT_TEAM = 7FH7F6J6R6;
 				INFOPLIST_FILE = timeboARd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeboARd.timeboARd;

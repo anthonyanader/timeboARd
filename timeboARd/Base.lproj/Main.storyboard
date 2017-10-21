@@ -12,7 +12,7 @@
         <!--SettingsViewController-->
         <scene sceneID="RQ5-dU-VuO">
             <objects>
-                <viewController title="SettingsViewController" id="g4O-QO-dVL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="SettingsViewController" id="g4O-QO-dVL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kch-LH-Qem">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--SaveBoardViewController-->
         <scene sceneID="fMh-Sm-ga5">
             <objects>
-                <viewController title="SaveBoardViewController" id="ywR-ED-MFA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SaveBoardViewController" title="SaveBoardViewController" id="ywR-ED-MFA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nx1-tf-ecs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--ShareAndCollaborateViewController-->
         <scene sceneID="c6b-GO-m3q">
             <objects>
-                <viewController title="ShareAndCollaborateViewController" id="Et4-TR-Vze" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShareAndCollaborateViewController" title="ShareAndCollaborateViewController" id="Et4-TR-Vze" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aHX-6Z-uJG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--TimeMachineViewController-->
         <scene sceneID="qlg-N6-Dok">
             <objects>
-                <viewController title="TimeMachineViewController" id="ThC-r1-1oW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeMachineViewController" title="TimeMachineViewController" id="ThC-r1-1oW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Shd-eJ-sej">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
