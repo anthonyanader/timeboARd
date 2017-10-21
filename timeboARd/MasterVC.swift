@@ -131,8 +131,6 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         print(posY)
         let planeGeometry = SCNPlane(width: posX, height: posY)
         
-        let midpointX = (positionA.x + positionB.x)/2
-        let midpointY = (positionA.y + positionB.y)/2
         let url = URL(string: "https://static.pexels.com/photos/127028/pexels-photo-127028.jpeg")
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         let theImage = UIImage(data: data!)

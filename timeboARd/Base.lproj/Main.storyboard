@@ -39,54 +39,6 @@
             </objects>
             <point key="canvasLocation" x="-263" y="-735"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tXr-a1-R10">
-            <objects>
-                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BV1-FR-VrT" customClass="ViewController" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
-                    <arskView key="view" contentMode="scaleToFill" id="EO5-fy-WZq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="9LE-LW-3aU"/>
-                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="gXh-dO-tx6"/>
-                            <outletCollection property="gestureRecognizers" destination="Fkk-Nv-RPM" appends="YES" id="3gb-uo-5A0"/>
-                            <outletCollection property="gestureRecognizers" destination="NC7-On-2Nu" appends="YES" id="rR5-FG-sQK"/>
-                            <outletCollection property="gestureRecognizers" destination="4R8-kJ-kLv" appends="YES" id="gmB-fH-Vf9"/>
-                        </connections>
-                    </arskView>
-                    <connections>
-                        <outlet property="sceneView" destination="EO5-fy-WZq" id="YuC-8q-ovz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Fkk-Nv-RPM">
-                    <rectEdge key="edges" top="YES"/>
-                    <connections>
-                        <action selector="topSwipeGesture:" destination="BV1-FR-VrT" id="hdf-vo-mLc"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="NC7-On-2Nu">
-                    <rectEdge key="edges" left="YES"/>
-                    <connections>
-                        <action selector="leftSwipeGesture:" destination="BV1-FR-VrT" id="JHA-ck-EQ3"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="ZNE-99-VUd">
-                    <rectEdge key="edges" right="YES"/>
-                    <connections>
-                        <action selector="rightSwipGesture:" destination="BV1-FR-VrT" id="cdO-yo-aeq"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
-                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="4R8-kJ-kLv">
-                    <rectEdge key="edges" bottom="YES"/>
-                    <connections>
-                        <action selector="bottomSwipeGesture:" destination="BV1-FR-VrT" id="3Nd-uZ-Dlv"/>
-                    </connections>
-                </screenEdgePanGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-263" y="-73"/>
-        </scene>
         <!--ShareAndCollaborateViewController-->
         <scene sceneID="c6b-GO-m3q">
             <objects>
@@ -139,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45s-mj-v5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-263" y="-73"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2wB-JY-Pym">
