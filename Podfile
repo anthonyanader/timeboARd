@@ -8,5 +8,4 @@ target 'timeboARd' do
   # Pods for timeboARd
   pod 'AFNetworking', '~> 2.6'
   pod 'ORStackView', '~> 3.0'
-  pod "ILLoginKit"
 end
