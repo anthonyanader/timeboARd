@@ -17,4 +17,7 @@ target 'timeboARd' do
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  
+  # Animations
+  pod 'ViewAnimator'
 end
