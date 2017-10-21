@@ -14,8 +14,8 @@
 		923B54741F9AE832004A45AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54731F9AE832004A45AA /* ViewController.swift */; };
 		923B54771F9AE832004A45AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B54751F9AE832004A45AA /* Main.storyboard */; };
 		923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */; };
-		ACD0CD491F9B2048000F9880 /* lava-0.png in Resources */ = {isa = PBXBuildFile; fileRef = ACD0CD481F9B2048000F9880 /* lava-0.png */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
+		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,8 @@
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
-		ACD0CD481F9B2048000F9880 /* lava-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lava-0.png"; path = "../../../Downloads/lava-0.png"; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C1FED1C0B7CF9E91162BAAFA /* Pods-timeboARd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,10 +78,10 @@
 				923B546D1F9AE832004A45AA /* AppDelegate.swift */,
 				923B546F1F9AE832004A45AA /* Scene.sks */,
 				923B54711F9AE832004A45AA /* Scene.swift */,
-				ACD0CD481F9B2048000F9880 /* lava-0.png */,
 				923B54731F9AE832004A45AA /* ViewController.swift */,
 				923B54751F9AE832004A45AA /* Main.storyboard */,
 				923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */,
+				BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */,
 				923B547D1F9AE832004A45AA /* Info.plist */,
 				BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */,
 			);
@@ -160,8 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				923B54701F9AE832004A45AA /* Scene.sks in Resources */,
+				BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */,
 				923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */,
-				ACD0CD491F9B2048000F9880 /* lava-0.png in Resources */,
 				923B54771F9AE832004A45AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,8 +199,10 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FLKAutoLayout/FLKAutoLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/Firebase/Firebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -209,8 +211,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLKAutoLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Firebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORStackView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
