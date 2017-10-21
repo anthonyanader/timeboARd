@@ -22,4 +22,6 @@ target 'timeboARd' do
 
   # Animations
   pod "ViewAnimator"
+  pod "PKCCrop"
+  pod "BeastComponents", :git => “https://github.com/istsest/BeastComponents.git”
 end

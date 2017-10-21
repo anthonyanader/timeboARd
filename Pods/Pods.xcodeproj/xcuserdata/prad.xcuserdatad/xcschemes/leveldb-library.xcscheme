@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA45E3E8A3066DB29CB8578551A1AB20"
-               BuildableName = "Pods_timeboARd.framework"
-               BlueprintName = "Pods-timeboARd"
+               BlueprintIdentifier = "266AE1506DAD13D34C0725E909C0C476"
+               BuildableName = "leveldb.framework"
+               BlueprintName = "leveldb-library"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA45E3E8A3066DB29CB8578551A1AB20"
-            BuildableName = "Pods_timeboARd.framework"
-            BlueprintName = "Pods-timeboARd"
+            BlueprintIdentifier = "266AE1506DAD13D34C0725E909C0C476"
+            BuildableName = "leveldb.framework"
+            BlueprintName = "leveldb-library"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

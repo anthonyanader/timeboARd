@@ -18,6 +18,8 @@
 		926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */; };
 		926D6C1F1F9BC3A60021F37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */; };
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
+		AC3F96651F9BFB5000F9580B /* MoviePoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F96641F9BFB5000F9580B /* MoviePoster.swift */; };
+		AC3F96671F9BFB7900F9580B /* MoviePoster.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3F96661F9BFB7900F9580B /* MoviePoster.xib */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
 		BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */; };
@@ -38,6 +40,8 @@
 		926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
 		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
+		AC3F96641F9BFB5000F9580B /* MoviePoster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePoster.swift; sourceTree = "<group>"; };
+		AC3F96661F9BFB7900F9580B /* MoviePoster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePoster.xib; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudStorageHelper.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				926D6C1A1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift */,
 				926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */,
 				926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */,
+				AC3F96641F9BFB5000F9580B /* MoviePoster.swift */,
+				AC3F96661F9BFB7900F9580B /* MoviePoster.xib */,
 				923B54751F9AE832004A45AA /* Main.storyboard */,
 				923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */,
 				BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */,
@@ -175,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				923B54701F9AE832004A45AA /* Scene.sks in Resources */,
+				AC3F96671F9BFB7900F9580B /* MoviePoster.xib in Resources */,
 				BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */,
 				923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */,
 				923B54771F9AE832004A45AA /* Main.storyboard in Resources */,
@@ -210,6 +217,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${PODS_ROOT}/BeastComponents/BeastComponents/BeastComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -217,6 +225,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework",
+				"${BUILT_PRODUCTS_DIR}/PKCCrop/PKCCrop.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -224,6 +233,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeastComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -231,6 +241,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORStackView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKCCrop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
+				AC3F96651F9BFB5000F9580B /* MoviePoster.swift in Sources */,
 				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
 				926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */,
 				BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */,

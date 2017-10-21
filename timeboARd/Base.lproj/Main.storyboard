@@ -57,13 +57,16 @@
         <!--TimeMachineViewController-->
         <scene sceneID="qlg-N6-Dok">
             <objects>
-                <viewController storyboardIdentifier="TimeMachineViewController" title="TimeMachineViewController" id="ThC-r1-1oW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Shd-eJ-sej">
+                <viewController storyboardIdentifier="TimeMachineViewController" title="TimeMachineViewController" id="ThC-r1-1oW" customClass="TimeMachineViewController" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shd-eJ-sej" customClass="BCCoverFlowView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xMc-bI-85O"/>
                     </view>
+                    <connections>
+                        <outlet property="coverFlowView" destination="Shd-eJ-sej" id="zbY-BE-5RG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VpT-QM-lDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

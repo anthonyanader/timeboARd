@@ -11,8 +11,34 @@ import SceneKit
 import ARKit
 import Firebase
 import FirebaseStorage
+import PKCCrop
 
-class MasterVC: UIViewController, ARSCNViewDelegate {
+
+class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
+    
+    // Crop Delegate
+    func pkcCropCancel(_ viewController: PKCCropViewController) {
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func pkcCropImage(_ image: UIImage?, originalImage: UIImage?) {
+        if let data = UIImagePNGRepresentation(image!) {
+            let filename = getDocumentsDirectory().appendingPathComponent("screenshotCrop.png")
+            try? data.write(to: filename)
+        }
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"))
+    }
+    
+    func pkcCropComplete(_ viewController: PKCCropViewController) {
+        navigationController?.popViewController(animated: true)
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // Non - Picker Delegate
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -177,7 +203,14 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
             try? data.write(to: filename)
         }
         
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshot.png"))
+        PKCCropHelper.shared.degressBeforeImage = UIImage(named: "pkc_crop_rotate_left.png")
+        PKCCropHelper.shared.degressAfterImage = UIImage(named: "pkc_crop_rotate_right.png")
+        PKCCropHelper.shared.isNavigationBarShow = false
+        let cropVC = PKCCrop().cropViewController(image)
+        cropVC.delegate = self
+        self.present(cropVC, animated: true, completion: nil)
+        
+        
     }
     
     func getDocumentsDirectory() -> URL {
