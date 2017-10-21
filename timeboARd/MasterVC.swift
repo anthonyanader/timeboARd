@@ -177,19 +177,19 @@ class MasterVC: UIViewController, ARSCNViewDelegate {
         print(posY)
         let planeGeometry = SCNPlane(width: posX, height: posY)
         
-        let midpointX = (positionA.x + positionB.x)/2
-        let midpointY = (positionA.y + positionB.y)/2
-        
-        planeGeometry.firstMaterial?.diffuse.contents = UIColor.red
+        let url = URL(string: "https://static.pexels.com/photos/127028/pexels-photo-127028.jpeg")
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        let theImage = UIImage(data: data!)
+        planeGeometry.firstMaterial?.diffuse.contents = theImage
         
         planeNode = SCNNode(geometry: planeGeometry)
         
-        planeNode.position = SCNVector3(positionA.x + midpointX, positionA.y + midpointY, positionA.z)
+        planeNode.position = SCNVector3(positionA.x, positionA.y , positionA.z)
         //planeNode.eulerAngles.z = 0
         //planeNode.eulerAngles.y = 0
         //planeNode.eulerAngles.x = 0
         
-        //planeNode.scale = SCNVector3(0.01, 0.01, 0.01)
+        planeNode.pivot = SCNMatrix4MakeTranslation(0.125, 0.125, 0)
         
         sceneView.scene.rootNode.addChildNode(planeNode)
     }
