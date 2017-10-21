@@ -12,6 +12,7 @@ target 'timeboARd' do
   # Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   
   # Facebook
   pod 'Bolts'
