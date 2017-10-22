@@ -27,10 +27,16 @@ class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         ref = ref.child("users").child((user?.uid)!).child("whiteboards")
+
+        let EXAMPLE_BOARD_URL = URL(string: "https://firebasestorage.googleapis.com/v0/b/infra-mix-183600.appspot.com/o/whiteboards%2Fw_021-Oct-2017-20-22-01.png?alt=media&token=e0e6d6c9-4389-4f8b-b046-4c16a33da5a3")
+        let EXAMPLE_DATA = try? Data(contentsOf: EXAMPLE_BOARD_URL!)
+        
+        _subViews.append(UIImageView(image: UIImage(data: EXAMPLE_DATA!)))
+        
         
         ref.observe(.childAdded, with: { (snapshot) -> Void in
             let url = URL(string: snapshot.value! as! String)
-            print (url)
+            print (url!)
             let data = try? Data(contentsOf: url!)
             self._subViews.append(UIImageView(image: UIImage(data: data!)))
         })
