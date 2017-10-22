@@ -21,12 +21,9 @@ class DemoPopUp: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         setBorder(demoTextView)
         setBorder(demoTextField)
-        
-        
     }
     
     let storageRef = Storage.storage().reference()
@@ -73,7 +70,6 @@ class DemoPopUp: UIViewController {
     }
  
     @IBAction func closeAction(_ sender: Any) {
-        
         // MARK:- Dismiss action
         
         self.dismiss(animated: true, completion: nil)
