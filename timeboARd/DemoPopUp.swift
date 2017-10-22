@@ -51,6 +51,7 @@ class DemoPopUp: UIViewController {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 downloadURL = metadata!.downloadURL()
+                print(downloadURL)
             }
         }
         
@@ -68,8 +69,8 @@ class DemoPopUp: UIViewController {
     }
     
     @IBAction func demoButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
         self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
+        //self.dismiss(animated: true, completion: nil)
     }
  
     @IBAction func closeAction(_ sender: Any) {

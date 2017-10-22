@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uqH-LS-lhJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QEb-AT-uUH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,8 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Thin</string>
+        </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
         </array>
     </customFonts>
     <scenes>
@@ -63,7 +69,7 @@
         <!--MasterVC-->
         <scene sceneID="Nvv-4F-FGo">
             <objects>
-                <viewController id="uqH-LS-lhJ" customClass="MasterVC" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Master" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uqH-LS-lhJ" customClass="MasterVC" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y10-0u-V3G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +219,7 @@
         <!--Demo Pop Up-->
         <scene sceneID="rVm-wo-Ycj">
             <objects>
-                <viewController storyboardIdentifier="DemoPopup" id="V7u-7R-pwl" customClass="DemoPopUp" customModule="AAPopUp_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DemoPopup" id="V7u-7R-pwl" customClass="DemoPopUp" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ZW-aB-CpV"/>
                         <viewControllerLayoutGuide type="bottom" id="kFk-Hl-KyA"/>

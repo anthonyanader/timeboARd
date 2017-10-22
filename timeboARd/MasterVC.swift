@@ -170,8 +170,8 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         planeGeometry.firstMaterial?.diffuse.contents = flippedImage
         
         planeNode = SCNNode(geometry: planeGeometry)
-        
-        planeNode.position = SCNVector3(positionA.x, positionA.y , positionA.z)
+        var zAvg = (positionA.z + positionB.z)/2
+        planeNode.position = SCNVector3(positionA.x, positionA.y , zAvg)
         //planeNode.eulerAngles.z = 0
         //planeNode.eulerAngles.y = 0
         //planeNode.eulerAngles.x = 0
