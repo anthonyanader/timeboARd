@@ -169,9 +169,10 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         print(posY)
         let planeGeometry = SCNPlane(width: posX, height: posY)
         
-        
-        let theImage = FirebaseStorageHelper.downloadImage(gcsRef: Storage.storage().reference().child("whiteboards/w_021-Oct-2017-17-30-13.png"));
-        let flippedImage = theImage.imageFlippedForRightToLeftLayoutDirection()
+        let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/infra-mix-183600.appspot.com/o/whiteboards%2Fw_021-Oct-2017-20-22-01.png?alt=media&token=e0e6d6c9-4389-4f8b-b046-4c16a33da5a3")
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        let theImage = UIImage(data: data!)
+        let flippedImage = theImage?.imageFlippedForRightToLeftLayoutDirection()
         planeGeometry.firstMaterial?.diffuse.contents = flippedImage
         
         planeNode = SCNNode(geometry: planeGeometry)
