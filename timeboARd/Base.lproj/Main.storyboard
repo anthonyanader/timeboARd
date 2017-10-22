@@ -227,7 +227,11 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ac9-Z4-HDa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+<<<<<<< HEAD
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+=======
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+>>>>>>> 0bf66b8255f71f3cfa5a3298c53166cfb5afe885
                         <subviews>
                             <view tag="999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4E-ds-k6W">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
