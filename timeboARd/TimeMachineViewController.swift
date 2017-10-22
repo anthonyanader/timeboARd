@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
 import VBPiledView
 
 class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
@@ -21,14 +23,17 @@ class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let user = Auth.auth().currentUser
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        ref = ref.child("users").child((user?.uid)!).child("whiteboards")
         
-        // Hirday Modify this to download the MetaData and Image for respective whiteboards.
-        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Camera")))
-        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Settings")))
-        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Collab")))
-        _subViews.append(UIImageView(image: UIImage(named: "libertystate.jpg")))
-        _subViews.append(UIImageView(image: UIImage(named: "Moonrise.jpg")))
-        _subViews.append(UIImageView(image: UIImage(named: "photographer.jpg")))
+        ref.observe(.childAdded, with: { (snapshot) -> Void in
+            let url = URL(string: snapshot.value! as! String)
+            print (url)
+            let data = try? Data(contentsOf: url!)
+            self._subViews.append(UIImageView(image: UIImage(data: data!)))
+        })
         
         for v in _subViews{
             v.contentMode = UIViewContentMode.scaleAspectFill
