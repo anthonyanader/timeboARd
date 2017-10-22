@@ -261,9 +261,9 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
     }
     
     @objc func didSwipeUp() {
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TimeMachineViewController") {
-            UIApplication.shared.keyWindow?.rootViewController = viewController
-            self.dismiss(animated: true, completion: nil)
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TimeMachineRoot") {
+            
+            self.present(viewController, animated: true, completion: nil)
         }
     }
 

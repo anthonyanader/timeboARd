@@ -59,24 +59,6 @@
             </objects>
             <point key="canvasLocation" x="458" y="-73"/>
         </scene>
-        <!--TimeMachineViewController-->
-        <scene sceneID="qlg-N6-Dok">
-            <objects>
-                <viewController storyboardIdentifier="TimeMachineViewController" title="TimeMachineViewController" id="ThC-r1-1oW" customClass="TimeMachineViewController" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Shd-eJ-sej" customClass="BCCoverFlowView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="xMc-bI-85O"/>
-                    </view>
-                    <connections>
-                        <outlet property="coverFlowView" destination="Shd-eJ-sej" id="zbY-BE-5RG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VpT-QM-lDT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-263" y="589"/>
-        </scene>
         <!--MasterVC-->
         <scene sceneID="Nvv-4F-FGo">
             <objects>
@@ -127,6 +109,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45s-mj-v5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-263.19999999999999" y="-73.313343328335833"/>
+        </scene>
+        <!--Time Machine View Controller-->
+        <scene sceneID="dAJ-DX-Obj">
+            <objects>
+                <viewController storyboardIdentifier="TimeMachineViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dHw-qk-Zf0" customClass="TimeMachineViewController" customModule="timeboARd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kgH-mJ-0z4" customClass="VBPiledView" customModule="VBPiledView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="v5P-wR-ufz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6nM-ar-oCE">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="MHk-TK-joe">
+                            <connections>
+                                <action selector="moveUp:" destination="dHw-qk-Zf0" id="RHc-Yf-4tA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="piledView" destination="kgH-mJ-0z4" id="co0-TQ-X1T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huJ-2J-igv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="621.13943028485767"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2wB-JY-Pym">
@@ -180,6 +187,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7cH-MF-2pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2095.1999999999998" y="-73.313343328335833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wKO-3h-UDn">
+            <objects>
+                <navigationController storyboardIdentifier="TimeMachineRoot" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e7S-V7-bVb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WI3-01-J6o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dHw-qk-Zf0" kind="relationship" relationship="rootViewController" id="tHE-cr-vTJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEa-cW-gWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="621"/>
         </scene>
     </scenes>
     <resources>

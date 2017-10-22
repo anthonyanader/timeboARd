@@ -8,76 +8,43 @@
 
 import Foundation
 import UIKit
-import BeastComponents
+import VBPiledView
 
-class TimeMachineViewController: UIViewController, BCCoverFlowViewDataSource, BCCoverFlowViewDelegate, UINavigationControllerDelegate, UIViewControllerTransitioningDelegate {
+class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
+    @IBOutlet var piledView: VBPiledView!
     
-    @IBOutlet weak var coverFlowView: BCCoverFlowView!
-    
-    var movies = [[String: Any]]()
+    @IBAction func moveUp(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    private var _subViews = [UIView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.delegate = self
         
-        self.loadMovies()
+        // Hirday Modify this to download the MetaData and Image for respective whiteboards.
+        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Camera")))
+        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Settings")))
+        _subViews.append(UIImageView(image: #imageLiteral(resourceName: "Collab")))
+        _subViews.append(UIImageView(image: UIImage(named: "libertystate.jpg")))
+        _subViews.append(UIImageView(image: UIImage(named: "Moonrise.jpg")))
+        _subViews.append(UIImageView(image: UIImage(named: "photographer.jpg")))
         
-        self.coverFlowView.register(nib: UINib.init(nibName: "MoviePoster", bundle: nil), forCoverReuseIdentifier: "MoviePoster")
-        
-        self.coverFlowView.gradientColorForStream = .black
-        self.coverFlowView.heightOverPassed = 40
-        
-        self.coverFlowView.dataSource = self
-        self.coverFlowView.delegate = self
-        self.coverFlowView.reloadData()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func loadMovies() {
-        if        let fileUrl = Bundle.main.url(forResource: "Movies", withExtension: "plist"),
-            let data = try? Data(contentsOf: fileUrl) {
-            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: Any]] {
-                self.movies.append(contentsOf: result!)
-            }
-        }
-    }
-    
-    func numberOfCovers(in coverFlowView: BCCoverFlowView) -> Int {
-        return self.movies.count
-    }
-    
-    func coverFlowView(_ coverFlowView: BCCoverFlowView, contentAt index: Int) -> BCCoverContentView {
-        let coverView = self.coverFlowView.dequeueReusableCoverContentView(withIdentifier: "MoviePoster", for: index) as! MoviePoster
-        coverView.movie = self.movies[index]
-        return coverView
-    }
-    
-    func coverFlowView(_ coverFlowView: BCCoverFlowView, didSelectCoverViewAtIndex index: Int) {
-        if let selectedPosterView = self.coverFlowView.coverContentView(for: index) as? MoviePoster {
+        for v in _subViews{
+            v.contentMode = UIViewContentMode.scaleAspectFill
+            v.clipsToBounds = true
+            v.backgroundColor = UIColor.gray
         }
         
-        /*
-         // It supports transitions to be presented and dismissed on UIViewControllerTransitioningDelegate, too.
-         vc.transitioningDelegate = self
-         self.present(vc, animated: true, completion: nil)
-         */
+        piledView.dataSource = self
     }
     
-    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return operation == .push ? self.coverFlowView.presentDetailAnimationController.zoomIn : self.coverFlowView.presentDetailAnimationController.zoomOut
+    func piledView(_ numberOfItemsForPiledView: VBPiledView) -> Int {
+        return _subViews.count
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self.coverFlowView.presentDetailAnimationController.zoomInAndFlipRight
+    func piledView(_ viewForPiledView: VBPiledView, itemAtIndex index: Int) -> UIView {
+        return _subViews[index]
     }
     
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self.coverFlowView.presentDetailAnimationController.zoomOutAndFlipLeft
-    }
-
 }
