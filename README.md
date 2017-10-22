@@ -4,40 +4,44 @@
 </div>
 
 ## Vision
->We're Git for brainstorming through the medium of Augmented Reality
+> We're Git for brainstorming through the medium of Augmented Reality
 
-Wanting to change the way teams catalog brainstorming sessions, we developed Team Bo[AR]d, a native iOS app, that enables users to collaborate, share and upload a series of 3D whiteboard sessions through Augmented Reality. Users have a time machine, flip through versioning view of all saved frames in real-time.
+Wanting to change the way teams catalog brainstorming sessions, we developed Time Bo[AR]d, a native iOS app, that enables users to collaborate, share and upload a series of 3D whiteboard sessions through Augmented Reality. Users then have a time machine like ability to flip and step through a versioning view of all saved virtual frames in real-time.
 
 ## Problem Solved
-Space is limited- whiteboards must be ~~erased~~  However, now anyone can log into Team Bo[AR]d, anchor the canvas with only two taps and find a catalog of their 3D  image collection loaded in a few seconds.
+Space is limited -whiteboards must be ~~erased~~. With Time Bo[AR]d, users can anchor the canvas with only two taps and a catalog their whiteboard into a virtual 3D model that is stored in the cloud. We help save important architectural diagrams, ideas, course notes which can later be projected and edited individually or collaboratively.
 
 ## Who is this for?
-Anyone. Anyone who engages in group activities and brainstorming sessions. Engineers, Students, Professors, Marketers, Advertisers, Analysts, Managers...
+Anyone. Anyone who engages in group activities and brainstorming sessions. Engineers, Students, Professors, Marketers, Advertisers, Analysts, Managers and much more.
 
-## Roadmap
-Due to the timing constraints for this hackathon, we were unable to complete all the features of our application.
+## Challenges & Roadmap
+ARKit does not support vertical plane detection. There was no way to set vertical virtual anchors using the framework itself; so we wrote the code for it, from scratch. This portion of the work took the majority of the time as it required knowledge of mathematics, planes, and geometry.
 
-Our next update will include seamless collaboration for two or more members editing and working on a board simultaneously. This portion of the application will be the primary focus of our next release.
+The majority of us learned Swift over the weekend. We had never worked with Xcode or the Swift Programming language. Due to time constraints, we had to compromise on some features. Our next update will include seamless collaboration for two or more members editing and working on a board simultaneously. This portion of the application will be the primary focus of our next release.
 
 
 ## Technologies
 * <p> <b>ARKit</b> - iOS 11 introduced ARKit, a new framework that allows us to easily create unparalleled augmented reality experiences for iPhone and iPad. </p>
-<p align = "center"><a href = "https://developer.apple.com/arkit/"><img src="/logos/arkit.png"></a></p>
+<p align = "center"><a href = "https://developer.apple.com/arkit/"><img src="/logos/arkit.png" width=150px></a></p>
 
 * <p> <b>Google Cloud Platform</b> - We enjoyed using firebase as our database solution. Looking to integrate more Google components in the future.  </p>
-<p align = "center"><a href = "https://developer.apple.com/arkit/"><img src="/logos/GCP.png"></a></p>
+<p align = "center"><a href = "https://developer.apple.com/arkit/"><img src="/logos/GCP.png" width=300px></a></p>
 
 * <p> <b>Facebook API</b> - Facebook Login & Account Kit.
 Simple account creation with Facebook, phone number or email. No more passwords. </p>
-<p align = "center"><a href = "https://developers.facebook.com"><img src="/logos/FBAPI.png"></a></p>
+<p align = "center"><a href = "https://developers.facebook.com"><img src="/logos/FBAPI.png" width=125px></a></p>
 
 ## Contributors and Maintainers
 There are no formal contributing guidelines at the moment as things are still in the early stages and we might find a better approach to design and architect the app. Anyone is welcome to contribute whatever they think will be helpful to improve this project. If you would like to contribute, feel free to create an issue or submit a pull request and we can go from there.
 
 - [Anthony A. Nader](https://github.com/anthonyanader)
 - [Hirday Gupta](https://github.com/HirdayGupta)
-- [Prad Nukula](https://github.com/prnk28)
+- [Prad Nukala](https://github.com/prnk28)
 
 
 
 ## Devpost Submission
+<div align="center">
+    <a href="https://devpost.com/software/timeboard">
+    <img src="logos/hh_logo.png" alt="Hack Harvard 2017" width=300px/></a>
+</div>
