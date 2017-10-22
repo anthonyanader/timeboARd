@@ -23,5 +23,5 @@ target 'timeboARd' do
   # Animations
   pod "ViewAnimator"
   pod "PKCCrop"
-  pod "BeastComponents", :git => “https://github.com/istsest/BeastComponents.git”
+  pod 'VBPiledView', :git => 'https://github.com/v-braun/VBPiledView.git'
 end

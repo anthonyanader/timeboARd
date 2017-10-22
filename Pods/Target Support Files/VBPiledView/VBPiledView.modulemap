@@ -1,0 +1,6 @@
+framework module VBPiledView {
+  umbrella header "VBPiledView-umbrella.h"
+
+  export *
+  module * { export * }
+}
