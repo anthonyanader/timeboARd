@@ -9,7 +9,7 @@
 Wanting to change the way teams catalog brainstorming sessions, we developed Time Bo[AR]d, a native iOS app, that enables users to collaborate, share and upload a series of 3D whiteboard sessions through Augmented Reality. Users then have a time machine like ability to flip and step through a versioning view of all saved virtual frames in real-time.
 
 ## Problem Solved
-Space is limited -whiteboards must be ~~erased~~. With Time Bo[AR]d, users can anchor the canvas with only two taps and a catalog their whiteboard into a virtual 3D model that is stored in the cloud. We help save important architectural diagrams, ideas, course notes which can later be projected and edited individually or collaboratively.
+Space is limited -whiteboards must be ~~erased~~. With Time Bo[AR]d, users can anchor the canvas with only two taps and catalog whiteboards into virtual 3D models that are stored in the cloud. We help save important architectural diagrams, ideas, course notes which can later be projected and edited individually or collaboratively.
 
 ## Who is this for?
 Anyone. Anyone who engages in group activities and brainstorming sessions. Engineers, Students, Professors, Marketers, Advertisers, Analysts, Managers and much more.
