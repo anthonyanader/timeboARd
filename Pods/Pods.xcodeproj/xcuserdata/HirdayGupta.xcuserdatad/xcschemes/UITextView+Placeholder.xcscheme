@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D53AEADDA2626E48249805BB65A093AC"
-               BuildableName = "Pods_timeboARd.framework"
-               BlueprintName = "Pods-timeboARd"
+               BlueprintIdentifier = "5E9107BB4ADDB66EC6DF035A5D25D830"
+               BuildableName = "UITextView_Placeholder.framework"
+               BlueprintName = "UITextView+Placeholder"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D53AEADDA2626E48249805BB65A093AC"
-            BuildableName = "Pods_timeboARd.framework"
-            BlueprintName = "Pods-timeboARd"
+            BlueprintIdentifier = "5E9107BB4ADDB66EC6DF035A5D25D830"
+            BuildableName = "UITextView_Placeholder.framework"
+            BlueprintName = "UITextView+Placeholder"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

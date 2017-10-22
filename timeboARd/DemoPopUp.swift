@@ -33,7 +33,7 @@ class DemoPopUp: UIViewController {
             "description": description
         ]
         
-        let gcsRef = storageRef.child("whiteboards/w_0.jpg")
+        let gcsRef = storageRef.child("whiteboards/w_0-"+currDateInString()+".png")
         var downloadURL: URL! // pre-declaration for var scoping
         
         let metadata = StorageMetadata()
@@ -48,6 +48,7 @@ class DemoPopUp: UIViewController {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 downloadURL = metadata!.downloadURL()
+                print(downloadURL)
             }
         }
         
@@ -65,8 +66,8 @@ class DemoPopUp: UIViewController {
     }
     
     @IBAction func demoButtonAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
         self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
+        //self.dismiss(animated: true, completion: nil)
     }
  
     @IBAction func closeAction(_ sender: Any) {
@@ -79,6 +80,21 @@ class DemoPopUp: UIViewController {
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+    
+    func currDateInString() -> String {
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let myString = formatter.string(from: Date())
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "dd-MMM-yyyy-HH-mm-ss"
+        // again convert your date to string
+        let myStringafd = formatter.string(from: yourDate!)
+        return myStringafd
     }
     
 }
