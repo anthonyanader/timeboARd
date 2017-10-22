@@ -17,7 +17,7 @@ Anyone. Anyone who engages in group activities and brainstorming sessions. Engin
 ## Challenges & Roadmap
 ARKit does not support vertical plane detection. There was no way to set vertical virtual anchors using the framework itself; so we wrote the code for it, from scratch. This portion of the work took the majority of the time as it required knowledge of mathematics, planes, and geometry.
 
-The majority of us learned Swift over the weekend. We had never worked with Xcode or the Swift Programming language. Due to time constraints, we had to compromise on some features. Our next update will include seamless collaboration for two or more members editing and working on a board simultaneously. This portion of the application will be the primary focus of our next release.
+The majority of us learned Swift over the weekend. We had never worked with Xcode or the Swift Programming language. Due to time constraints, we had to compromise on some features. Our next update will include seamless collaboration for two or more members real-time editing and working on a board simultaneously. This portion of the application will be the primary focus of our next release.
 
 
 ## Technologies
