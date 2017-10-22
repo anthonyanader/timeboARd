@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E39A1BD7FB813905341EA98B1C9C1742'
-               BlueprintName = 'VBPiledView'
+               BlueprintIdentifier = 'FD213970B2A1880EBDFAF8B48C89814E'
+               BlueprintName = 'AAPopUp'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'VBPiledView.framework'>
+               BuildableName = 'AAPopUp.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

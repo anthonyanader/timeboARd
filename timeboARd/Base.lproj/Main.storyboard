@@ -5,9 +5,18 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SettingsViewController-->
         <scene sceneID="RQ5-dU-VuO">
@@ -182,6 +191,115 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xEa-cW-gWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-705" y="621"/>
+        </scene>
+        <!--Demo Pop Up-->
+        <scene sceneID="rVm-wo-Ycj">
+            <objects>
+                <viewController storyboardIdentifier="DemoPopup" id="V7u-7R-pwl" customClass="DemoPopUp" customModule="AAPopUp_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ZW-aB-CpV"/>
+                        <viewControllerLayoutGuide type="bottom" id="kFk-Hl-KyA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XqK-Qo-iuy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-nL-RUb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-St-7ty">
+                                        <rect key="frame" x="282" y="8" width="30" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="b9h-OB-uC5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeAction:" destination="V7u-7R-pwl" eventType="touchUpInside" id="JQU-1W-IK9"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Board Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vL9-fF-Fbs">
+                                        <rect key="frame" x="8" y="66" width="304" height="40"/>
+                                        <color key="backgroundColor" red="0.48005046330000001" green="0.57879851650000003" blue="0.63342811379999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oFb-U5-dhf"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="0.69549978599999995" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Description Here..." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XSV-WG-1hc">
+                                        <rect key="frame" x="8" y="109" width="304" height="135"/>
+                                        <color key="backgroundColor" red="0.48005046330000001" green="0.57879851650000003" blue="0.63342811379999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" white="1" alpha="0.69549978599999995" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3i-SA-w6s">
+                                        <rect key="frame" x="8" y="252" width="304" height="40"/>
+                                        <color key="backgroundColor" red="0.49092491110000003" green="0.63342811379999997" blue="0.52306139200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oT6-WR-kYC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="demoButtonAction:" destination="V7u-7R-pwl" eventType="touchUpInside" id="cv3-oy-bNS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uploaded!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-6B-NuX">
+                                        <rect key="frame" x="8" y="33" width="304" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63342811379999997" green="0.48465665949999998" blue="0.2802924155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qT2-6B-NuX" firstAttribute="top" secondItem="d5Z-nL-RUb" secondAttribute="top" constant="33" id="5d2-XK-D2T"/>
+                                    <constraint firstItem="XSV-WG-1hc" firstAttribute="trailing" secondItem="c3i-SA-w6s" secondAttribute="trailing" id="AA5-KK-D9f"/>
+                                    <constraint firstItem="1J3-St-7ty" firstAttribute="top" secondItem="d5Z-nL-RUb" secondAttribute="topMargin" id="ECM-qh-YCu"/>
+                                    <constraint firstItem="qT2-6B-NuX" firstAttribute="leading" secondItem="d5Z-nL-RUb" secondAttribute="leadingMargin" id="PSY-m8-aAw"/>
+                                    <constraint firstItem="1J3-St-7ty" firstAttribute="trailing" secondItem="qT2-6B-NuX" secondAttribute="trailing" id="RIw-od-9ig"/>
+                                    <constraint firstItem="vL9-fF-Fbs" firstAttribute="leading" secondItem="XSV-WG-1hc" secondAttribute="leading" id="TjF-Yp-14F"/>
+                                    <constraint firstItem="1J3-St-7ty" firstAttribute="trailing" secondItem="d5Z-nL-RUb" secondAttribute="trailingMargin" id="cFx-i3-vok"/>
+                                    <constraint firstItem="vL9-fF-Fbs" firstAttribute="trailing" secondItem="XSV-WG-1hc" secondAttribute="trailing" id="hZs-bG-YEC"/>
+                                    <constraint firstItem="c3i-SA-w6s" firstAttribute="top" secondItem="XSV-WG-1hc" secondAttribute="bottom" constant="8" symbolic="YES" id="jRA-S9-uUG"/>
+                                    <constraint firstItem="c3i-SA-w6s" firstAttribute="bottom" secondItem="d5Z-nL-RUb" secondAttribute="bottomMargin" id="nYa-m1-O9A"/>
+                                    <constraint firstItem="qT2-6B-NuX" firstAttribute="leading" secondItem="vL9-fF-Fbs" secondAttribute="leading" id="otf-Qb-hsY"/>
+                                    <constraint firstAttribute="height" constant="300" id="qFS-oM-Doz"/>
+                                    <constraint firstItem="qT2-6B-NuX" firstAttribute="trailing" secondItem="vL9-fF-Fbs" secondAttribute="trailing" id="qOQ-Tl-qqz"/>
+                                    <constraint firstItem="vL9-fF-Fbs" firstAttribute="top" secondItem="qT2-6B-NuX" secondAttribute="bottom" constant="3" id="uqP-4c-4Ew"/>
+                                    <constraint firstItem="XSV-WG-1hc" firstAttribute="leading" secondItem="c3i-SA-w6s" secondAttribute="leading" id="wrW-EL-dng"/>
+                                    <constraint firstItem="vL9-fF-Fbs" firstAttribute="top" secondItem="1J3-St-7ty" secondAttribute="bottom" constant="32" id="xZv-eN-9eE"/>
+                                    <constraint firstItem="XSV-WG-1hc" firstAttribute="top" secondItem="vL9-fF-Fbs" secondAttribute="bottom" constant="3" id="xen-Kf-bnL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d5Z-nL-RUb" secondAttribute="trailing" id="c4F-xo-3Qh"/>
+                            <constraint firstItem="d5Z-nL-RUb" firstAttribute="leading" secondItem="XqK-Qo-iuy" secondAttribute="leading" id="fyj-69-s1J"/>
+                            <constraint firstItem="d5Z-nL-RUb" firstAttribute="top" secondItem="1ZW-aB-CpV" secondAttribute="bottom" id="kzk-vt-O51"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DZG-KQ-VDq"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="demoLabel" destination="qT2-6B-NuX" id="hi3-NQ-37j"/>
+                        <outlet property="demoTextField" destination="vL9-fF-Fbs" id="siK-3F-VDx"/>
+                        <outlet property="demoTextView" destination="XSV-WG-1hc" id="TE8-j1-UUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eP3-PV-LTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="-54"/>
         </scene>
     </scenes>
     <resources>

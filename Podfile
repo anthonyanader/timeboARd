@@ -22,6 +22,8 @@ target 'timeboARd' do
 
   # Animations
   pod "ViewAnimator"
+  pod 'UITextView+Placeholder', '~> 1.2'
+  pod 'AAPopUp'
   pod "PKCCrop"
   pod 'VBPiledView', :git => 'https://github.com/v-braun/VBPiledView.git'
 end
