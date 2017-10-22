@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		46640350C73884E4BA6EDB00 /* Pods_timeboARd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370543F4C62E015E6F609B6 /* Pods_timeboARd.framework */; };
 		923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B546D1F9AE832004A45AA /* AppDelegate.swift */; };
-		923B54701F9AE832004A45AA /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 923B546F1F9AE832004A45AA /* Scene.sks */; };
-		923B54721F9AE832004A45AA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923B54711F9AE832004A45AA /* Scene.swift */; };
 		923B54771F9AE832004A45AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B54751F9AE832004A45AA /* Main.storyboard */; };
 		923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923B547A1F9AE832004A45AA /* LaunchScreen.storyboard */; };
 		926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C181F9BC33A0021F37A /* SaveBoardViewController.swift */; };
@@ -30,8 +28,6 @@
 		1370543F4C62E015E6F609B6 /* Pods_timeboARd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timeboARd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		923B546A1F9AE832004A45AA /* timeboARd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeboARd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923B546D1F9AE832004A45AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		923B546F1F9AE832004A45AA /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		923B54711F9AE832004A45AA /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		923B54761F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		923B547B1F9AE832004A45AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		923B547D1F9AE832004A45AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 				AC3F96701F9C208200F9580B /* Constants.swift */,
 				AC3F966E1F9C207700F9580B /* DemoPopUp.swift */,
 				923B546D1F9AE832004A45AA /* AppDelegate.swift */,
-				923B546F1F9AE832004A45AA /* Scene.sks */,
-				923B54711F9AE832004A45AA /* Scene.swift */,
 				926D6C1A1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift */,
 				926D6C1C1F9BC3700021F37A /* TimeMachineViewController.swift */,
 				926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */,
@@ -183,7 +177,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				923B54701F9AE832004A45AA /* Scene.sks in Resources */,
 				AC3F966B1F9C005200F9580B /* Images.xcassets in Resources */,
 				BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */,
 				923B547C1F9AE832004A45AA /* LaunchScreen.storyboard in Resources */,
@@ -288,7 +281,6 @@
 				BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */,
 				926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */,
 				926D6C1B1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift in Sources */,
-				923B54721F9AE832004A45AA /* Scene.swift in Sources */,
 				923B546E1F9AE832004A45AA /* AppDelegate.swift in Sources */,
 				926D6C1F1F9BC3A60021F37A /* SettingsViewController.swift in Sources */,
 			);
