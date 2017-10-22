@@ -43,7 +43,10 @@ class LoginViewController: UIViewController {
                 // Present the main view
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Master") {
                     UIApplication.shared.keyWindow?.rootViewController = viewController
+                    let defaults = UserDefaults.standard
+                    defaults.set(1, forKey: "Fb")
                     self.dismiss(animated: true, completion: nil)
+                    
                 }
                 
             })
@@ -52,7 +55,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let defaults = UserDefaults.standard
+        let fb =  defaults.integer(forKey: "Fb")
+        if (fb == 1) {
+            // Present the main view
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Master") {
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
         
     }
     

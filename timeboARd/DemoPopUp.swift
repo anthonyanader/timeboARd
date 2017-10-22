@@ -10,6 +10,7 @@ import UIKit
 import AAPopUp
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
 
 class DemoPopUp: UIViewController {
     
@@ -48,7 +49,10 @@ class DemoPopUp: UIViewController {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 downloadURL = metadata!.downloadURL()
-                print(downloadURL)
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                let user = Auth.auth().currentUser
+                ref.child("users").child((user?.uid)!).child("whiteboards").childByAutoId().setValue(downloadURL);
             }
         }
         
@@ -66,8 +70,8 @@ class DemoPopUp: UIViewController {
     }
     
     @IBAction func demoButtonAction(_ sender: Any) {
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (boardNameField.text)!, description: (demoTextView.text)!)
-        //self.dismiss(animated: true, completion: nil)
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
+        self.dismiss(animated: true, completion: nil)
     }
  
     @IBAction func closeAction(_ sender: Any) {
