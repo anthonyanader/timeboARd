@@ -10,16 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-<<<<<<< HEAD
-        <array key="Futura.ttc">
-            <string>Futura-Medium</string>
-        </array>
-        <array key="MarkerFeltWide.ttf">
-            <string>MarkerFelt-Wide</string>
-=======
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Thin</string>
->>>>>>> b6101d9fc41725bd3aea5434ba5b05e19e8adc28
         </array>
     </customFonts>
     <scenes>
