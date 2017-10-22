@@ -7,7 +7,7 @@
 		<key>AAPopUp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>14</integer>
 		</dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
@@ -57,7 +57,7 @@
 		<key>PKCCrop.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 		<key>Pods-timeboARd.xcscheme</key>
 		<dict>
@@ -72,12 +72,12 @@
 		<key>UITextView+Placeholder.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>VBPiledView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>18</integer>
 		</dict>
 		<key>ViewAnimator.xcscheme</key>
 		<dict>
@@ -87,7 +87,7 @@
 		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

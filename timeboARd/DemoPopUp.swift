@@ -14,16 +14,16 @@ import FirebaseStorage
 class DemoPopUp: UIViewController {
     
     @IBOutlet weak var demoLabel: UILabel!
+    @IBOutlet weak var boardNameField: UITextField!
     @IBOutlet weak var demoTextField: UITextField!
-    @IBOutlet weak var demoTextView: UITextView!
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
         setBorder(demoTextView)
-        setBorder(demoTextField)
+        setBorder(boardNameField)
     }
     
     let storageRef = Storage.storage().reference()
@@ -66,7 +66,7 @@ class DemoPopUp: UIViewController {
     }
     
     @IBAction func demoButtonAction(_ sender: Any) {
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (boardNameField.text)!, description: (demoTextView.text)!)
         //self.dismiss(animated: true, completion: nil)
     }
  
