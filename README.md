@@ -50,5 +50,5 @@ There are no formal contributing guidelines at the moment as things are still in
 ## YouTube Demo
 <div align="center">
     <a href="http://www.youtube.com/watch?v=iPT5NOxoJnY">
-    <img src="http://img.youtube.com/vi/iPT5NOxoJnY/0.jpg" alt="Time Bo[AR]d Video Demonstration" width=300px/></a>
+    <img src="http://img.youtube.com/vi/iPT5NOxoJnY/0.jpg" alt="Time Bo[AR]d Video Demonstration" width=500px/></a>
 </div>
