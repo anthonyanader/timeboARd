@@ -10,23 +10,21 @@ import UIKit
 import AAPopUp
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
 
 class DemoPopUp: UIViewController {
     
     @IBOutlet weak var demoLabel: UILabel!
+    @IBOutlet weak var boardNameField: UITextField!
     @IBOutlet weak var demoTextField: UITextField!
-    @IBOutlet weak var demoTextView: UITextView!
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
+
         setBorder(demoTextView)
-        setBorder(demoTextField)
-        
-        
+        setBorder(boardNameField)
     }
     
     let storageRef = Storage.storage().reference()
@@ -51,7 +49,10 @@ class DemoPopUp: UIViewController {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 downloadURL = metadata!.downloadURL()
-                print(downloadURL)
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                let user = Auth.auth().currentUser
+                ref.child("users").child((user?.uid)!).child("whiteboards").childByAutoId().setValue(downloadURL);
             }
         }
         
@@ -74,7 +75,6 @@ class DemoPopUp: UIViewController {
     }
  
     @IBAction func closeAction(_ sender: Any) {
-        
         // MARK:- Dismiss action
         
         self.dismiss(animated: true, completion: nil)
