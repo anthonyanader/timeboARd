@@ -12,7 +12,7 @@ import Firebase
 import FirebaseDatabase
 import VBPiledView
 
-class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
+class TimeMachineViewController: UIViewController, VBPiledViewDataSource, UIGestureRecognizerDelegate {
     @IBOutlet var piledView: VBPiledView!
     
     @IBAction func moveUp(_ sender: Any) {
@@ -45,9 +45,18 @@ class TimeMachineViewController: UIViewController, VBPiledViewDataSource {
             v.contentMode = UIViewContentMode.scaleAspectFill
             v.clipsToBounds = true
             v.backgroundColor = UIColor.gray
+            let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+            
+            view.addGestureRecognizer(tap)
+            view.isUserInteractionEnabled = true
         }
         
         piledView.dataSource = self
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        print("Hello World")
+        // Hirday we are going to need to take the URL image given for the view in this class and transfer it to the MasterVC which we can apply touch the plane and reload. Too tired rn to give a fuck
     }
     
     func piledView(_ numberOfItemsForPiledView: VBPiledView) -> Int {
