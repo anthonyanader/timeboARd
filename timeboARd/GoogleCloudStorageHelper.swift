@@ -35,4 +35,20 @@ class FirebaseStorageHelper {
         return uploadTask // documentation of uploadTask object: https://firebase.google.com/docs/storage/ios/upload-files
     }
     
+    static func downloadImage(gcsRef: StorageReference) -> UIImage {
+        var image: UIImage?;
+        gcsRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                print (error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                image = UIImage(data: data!)
+            }
+        }
+        if image != nil {
+            return image!
+        }
+        return UIImage.init(named: "")!
+    }
+    
 }
