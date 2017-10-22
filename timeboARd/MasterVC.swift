@@ -172,11 +172,9 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         planeNode = SCNNode(geometry: planeGeometry)
         var zAvg = (positionA.z + positionB.z)/2
         planeNode.position = SCNVector3(positionA.x, positionA.y , zAvg)
-        //planeNode.eulerAngles.z = 0
-        //planeNode.eulerAngles.y = 0
-        //planeNode.eulerAngles.x = 0
+        planeNode.eulerAngles = SCNVector3Make(0, 0, Float(M_PI));
         
-        planeNode.pivot = SCNMatrix4MakeTranslation(0.125, 0.125, 0)
+        planeNode.pivot = SCNMatrix4MakeTranslation(-0.125, -0.125, 0)
         
         sceneView.scene.rootNode.addChildNode(planeNode)
     }
