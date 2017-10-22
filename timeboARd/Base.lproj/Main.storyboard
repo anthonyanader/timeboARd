@@ -226,7 +226,7 @@
                     </layoutGuides>
                     <view key="view" alpha="0.84999999999999998" contentMode="scaleToFill" id="XqK-Qo-iuy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view tag="1000" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5Z-nL-RUb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
