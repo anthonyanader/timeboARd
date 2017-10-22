@@ -158,19 +158,22 @@
                                 <rect key="frame" x="68" y="548" width="239" height="64"/>
                                 <state key="normal" image="Google +"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="timebo[AR]d" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMy-12-AV5">
-                                <rect key="frame" x="79" y="167" width="216" height="52"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="39"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Bo[AR]d" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMy-12-AV5">
+                                <rect key="frame" x="80" y="170" width="215" height="43.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="-4" height="3"/>
+                                <size key="shadowOffset" width="-5" height="-2"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rZ0-gH-Sex" firstAttribute="leading" secondItem="wjT-EI-98B" secondAttribute="leading" constant="68" id="5oh-PF-gE4"/>
                             <constraint firstItem="wjT-EI-98B" firstAttribute="trailing" secondItem="mJn-pZ-sr4" secondAttribute="trailing" constant="68" id="FcM-yD-KDo"/>
+                            <constraint firstItem="wjT-EI-98B" firstAttribute="trailing" secondItem="XMy-12-AV5" secondAttribute="trailing" constant="80" id="LAb-O9-ytX"/>
+                            <constraint firstItem="XMy-12-AV5" firstAttribute="top" secondItem="wjT-EI-98B" secondAttribute="top" constant="150" id="O2F-th-1Z8"/>
+                            <constraint firstItem="XMy-12-AV5" firstAttribute="leading" secondItem="wjT-EI-98B" secondAttribute="leading" constant="80" id="QbN-4G-WVy"/>
                             <constraint firstItem="AC2-7n-f44" firstAttribute="leading" secondItem="wjT-EI-98B" secondAttribute="leading" id="Vpn-L0-T39"/>
                             <constraint firstItem="wjT-EI-98B" firstAttribute="trailing" secondItem="rZ0-gH-Sex" secondAttribute="trailing" constant="68" id="YSJ-T9-mUs"/>
                             <constraint firstItem="mJn-pZ-sr4" firstAttribute="leading" secondItem="wjT-EI-98B" secondAttribute="leading" constant="68" id="fd2-KP-UKf"/>

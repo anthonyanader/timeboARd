@@ -64,6 +64,11 @@
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
+		<key>VBPiledView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>ViewAnimator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
