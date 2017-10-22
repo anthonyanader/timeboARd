@@ -29,14 +29,9 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
             try? data.write(to: filename)
         }
         let popup: AAPopUp = AAPopUp(popup: .demo2)
-        
-        let label = popup.viewWithTag(10) as! UILabel
-        label.text = "Welcome to AAPopUp!"
         popup.present { popup in
             
             // MARK:- View Did Appear Here
-            
-            popup.dismissWithTag(9)
             
             
         }
