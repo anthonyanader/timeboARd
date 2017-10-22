@@ -19,6 +19,8 @@
 		926D6C1F1F9BC3A60021F37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D6C1E1F9BC3A60021F37A /* SettingsViewController.swift */; };
 		AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2472961F9B9E0200D09427 /* MasterVC.swift */; };
 		AC3F966B1F9C005200F9580B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3F966A1F9C005200F9580B /* Images.xcassets */; };
+		AC3F966F1F9C207700F9580B /* DemoPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F966E1F9C207700F9580B /* DemoPopUp.swift */; };
+		AC3F96711F9C208200F9580B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3F96701F9C208200F9580B /* Constants.swift */; };
 		BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */; };
 		BF5CAEE81F9B6CE60074B8C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */; };
 		BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */; };
@@ -40,6 +42,8 @@
 		9DEBFB055058BD848138B8A1 /* Pods-timeboARd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timeboARd.release.xcconfig"; path = "Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd.release.xcconfig"; sourceTree = "<group>"; };
 		AC2472961F9B9E0200D09427 /* MasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterVC.swift; sourceTree = "<group>"; };
 		AC3F966A1F9C005200F9580B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC3F966E1F9C207700F9580B /* DemoPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPopUp.swift; sourceTree = "<group>"; };
+		AC3F96701F9C208200F9580B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BF5CAEE51F9B11D90074B8C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF5CAEE71F9B6CE60074B8C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BFB9F4A61F9BD51400032466 /* GoogleCloudStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudStorageHelper.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		923B546C1F9AE832004A45AA /* timeboARd */ = {
 			isa = PBXGroup;
 			children = (
+				AC3F96701F9C208200F9580B /* Constants.swift */,
+				AC3F966E1F9C207700F9580B /* DemoPopUp.swift */,
 				923B546D1F9AE832004A45AA /* AppDelegate.swift */,
 				923B546F1F9AE832004A45AA /* Scene.sks */,
 				923B54711F9AE832004A45AA /* Scene.swift */,
@@ -213,6 +219,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-timeboARd/Pods-timeboARd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AAPopUp/AAPopUp.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -222,6 +229,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework",
 				"${BUILT_PRODUCTS_DIR}/PKCCrop/PKCCrop.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
 				"${BUILT_PRODUCTS_DIR}/VBPiledView/VBPiledView.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -229,6 +237,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AAPopUp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -238,6 +247,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORStackView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKCCrop.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VBPiledView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -271,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5CAEE61F9B11D90074B8C0 /* LoginViewController.swift in Sources */,
+				AC3F96711F9C208200F9580B /* Constants.swift in Sources */,
 				AC2472971F9B9E0200D09427 /* MasterVC.swift in Sources */,
 				926D6C1D1F9BC3700021F37A /* TimeMachineViewController.swift in Sources */,
+				AC3F966F1F9C207700F9580B /* DemoPopUp.swift in Sources */,
 				BFB9F4A71F9BD51400032466 /* GoogleCloudStorageHelper.swift in Sources */,
 				926D6C191F9BC33A0021F37A /* SaveBoardViewController.swift in Sources */,
 				926D6C1B1F9BC35B0021F37A /* ShareAndCollaborateViewController.swift in Sources */,
@@ -418,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R57NWZM462;
+				DEVELOPMENT_TEAM = 7FH7F6J6R6;
 				INFOPLIST_FILE = timeboARd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeboARd.timeboARd;
@@ -435,7 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R57NWZM462;
+				DEVELOPMENT_TEAM = 7FH7F6J6R6;
 				INFOPLIST_FILE = timeboARd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timeboARd.timeboARd;

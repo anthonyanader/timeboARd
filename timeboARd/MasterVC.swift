@@ -12,7 +12,7 @@ import ARKit
 import Firebase
 import FirebaseStorage
 import PKCCrop
-
+import AAPopUp
 
 class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
     
@@ -28,7 +28,18 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
             let filename = getDocumentsDirectory().appendingPathComponent("screenshotCrop.png")
             try? data.write(to: filename)
         }
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"))
+        let popup: AAPopUp = AAPopUp(popup: .demo2)
+        
+        let label = popup.viewWithTag(10) as! UILabel
+        label.text = "Welcome to AAPopUp!"
+        popup.present { popup in
+            
+            // MARK:- View Did Appear Here
+            
+            popup.dismissWithTag(9)
+            
+            
+        }
     }
     
     func pkcCropComplete(_ viewController: PKCCropViewController) {
@@ -141,23 +152,6 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         
     }
     
-    func updateText(text: String, atPosition position: SCNVector3){
-        
-        textNode.removeFromParentNode()
-        
-        let textGeometry = SCNText(string: text, extrusionDepth: 1.0)
-        
-        textGeometry.firstMaterial?.diffuse.contents = UIColor.red
-        
-        textNode = SCNNode(geometry: textGeometry)
-        
-        textNode.position = SCNVector3(position.x, position.y + 0.01, position.z)
-        
-        textNode.scale = SCNVector3(0.01, 0.01, 0.01)
-        
-        sceneView.scene.rootNode.addChildNode(textNode)
-        
-    }
     func updatePlane(begPosition positionA: SCNVector3,endPosition positionB: SCNVector3){
         
         planeNode.removeFromParentNode()

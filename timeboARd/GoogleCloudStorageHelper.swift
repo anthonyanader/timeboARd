@@ -13,16 +13,22 @@ import FirebaseStorage
 class FirebaseStorageHelper {
     let storageRef = Storage.storage().reference()
     
-    func uploadImage(filePath: String) -> StorageUploadTask {
+    func uploadImage(filePath: String, title: String, description: String) -> StorageUploadTask {
+        let cmetadata = [
+                "title": title,
+                "description": description
+        ]
+        
         let localFile = URL(string: filePath)!
         let gcsRef = storageRef.child("whiteboards/w_0.jpg")
         var downloadURL: URL! // pre-declaration for var scoping
         
         let metadata = StorageMetadata()
         metadata.contentType = "image/png"
+        metadata.customMetadata = cmetadata
         
         
-        let uploadTask = gcsRef.putFile(from: localFile, metadata: nil) { metadata, error in
+        let uploadTask = gcsRef.putFile(from: localFile, metadata: metadata) { metadata, error in
             if let error = error {
                 // TODO: Handle error.
                 print (error)
@@ -39,7 +45,7 @@ class FirebaseStorageHelper {
         var image: UIImage?;
         gcsRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
-                print (error)
+                print ("ERROR: \(error)")
             } else {
                 // Data for "images/island.jpg" is returned
                 image = UIImage(data: data!)

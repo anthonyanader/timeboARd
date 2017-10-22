@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4C6B8E2566474E5B1003CE4935BFF8B8'
+               BlueprintIdentifier = 'E39A1BD7FB813905341EA98B1C9C1742'
                BlueprintName = 'VBPiledView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'VBPiledView.framework'>
