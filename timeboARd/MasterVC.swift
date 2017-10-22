@@ -16,6 +16,8 @@ import AAPopUp
 
 class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
     
+    static var whiteboardToLoad: UIImage?
+    
     // Crop Delegate
     func pkcCropCancel(_ viewController: PKCCropViewController) {
         navigationController?.popViewController(animated: true)
@@ -158,9 +160,14 @@ class MasterVC: UIViewController, ARSCNViewDelegate, PKCCropDelegate {
         print(posY)
         let planeGeometry = SCNPlane(width: posX, height: posY)
         
-        let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/infra-mix-183600.appspot.com/o/whiteboards%2Fw_021-Oct-2017-20-22-01.png?alt=media&token=e0e6d6c9-4389-4f8b-b046-4c16a33da5a3")
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        let theImage = UIImage(data: data!)
+        var theImage: UIImage?
+        if (MasterVC.whiteboardToLoad == nil) {
+            let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/infra-mix-183600.appspot.com/o/whiteboards%2Fw_021-Oct-2017-20-22-01.png?alt=media&token=e0e6d6c9-4389-4f8b-b046-4c16a33da5a3")
+            let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+            theImage = UIImage(data: data!)
+        } else {
+            theImage = MasterVC.whiteboardToLoad
+        }
         let flippedImage = theImage?.imageFlippedForRightToLeftLayoutDirection()
         planeGeometry.firstMaterial?.diffuse.contents = flippedImage
         
