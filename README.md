@@ -45,3 +45,5 @@ There are no formal contributing guidelines at the moment as things are still in
     <a href="https://devpost.com/software/timeboard">
     <img src="logos/hh_logo.png" alt="Hack Harvard 2017" width=300px/></a>
 </div>
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/iPT5NOxoJnY/0.jpg)](http://www.youtube.com/watch?v=iPT5NOxoJnY "Time Bo[AR]d Video Demonstration")
