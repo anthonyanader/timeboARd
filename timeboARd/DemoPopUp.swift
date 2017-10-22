@@ -23,7 +23,7 @@ class DemoPopUp: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        setBorder(demoTextView)
+        setBorder(demoTextField)
         setBorder(boardNameField)
     }
     
@@ -52,13 +52,12 @@ class DemoPopUp: UIViewController {
                 var ref: DatabaseReference!
                 ref = Database.database().reference()
                 let user = Auth.auth().currentUser
-                ref.child("users").child((user?.uid)!).child("whiteboards").childByAutoId().setValue(downloadURL);
+                ref.child("users").child((user?.uid)!).child("whiteboards").childByAutoId().setValue(downloadURL.absoluteString);
             }
         }
         
         return uploadTask // documentation of uploadTask object: https://firebase.google.com/docs/storage/ios/upload-files
-    }
-    
+    }    
     func setBorder(_ view: UIView) {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor(red:222/255.0, green:225/255.0, blue:227/255.0, alpha: 1.0).cgColor
@@ -70,7 +69,7 @@ class DemoPopUp: UIViewController {
     }
     
     @IBAction func demoButtonAction(_ sender: Any) {
-        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (boardNameField.text)!, description: (demoTextField.text)!)
         self.dismiss(animated: true, completion: nil)
     }
  
