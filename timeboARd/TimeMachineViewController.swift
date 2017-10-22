@@ -30,7 +30,7 @@ class TimeMachineViewController: UIViewController, VBPiledViewDataSource, UIGest
         ref = Database.database().reference()
         ref = ref.child("users").child((user?.uid)!).child("whiteboards")
         var urlSub = 0
-
+        
         let EXAMPLE_BOARD_URL = URL(string: "https://firebasestorage.googleapis.com/v0/b/infra-mix-183600.appspot.com/o/whiteboards%2Fw_021-Oct-2017-20-22-01.png?alt=media&token=e0e6d6c9-4389-4f8b-b046-4c16a33da5a3")
         self.urls.append(EXAMPLE_BOARD_URL!)
         let EXAMPLE_DATA = try? Data(contentsOf: EXAMPLE_BOARD_URL!)
@@ -73,12 +73,7 @@ class TimeMachineViewController: UIViewController, VBPiledViewDataSource, UIGest
         print("Hello World")
         let data = try? Data(contentsOf: self.urls[(sender.view?.tag)!])
         MasterVC.whiteboardToLoad = UIImage(data: data!)
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "Master") {
-            UIApplication.shared.keyWindow?.rootViewController = viewController
-            let defaults = UserDefaults.standard
-            defaults.set(1, forKey: "Fb")
-            self.dismiss(animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     func piledView(_ numberOfItemsForPiledView: VBPiledView) -> Int {
