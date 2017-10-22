@@ -69,7 +69,7 @@ class DemoPopUp: UIViewController {
     
     @IBAction func demoButtonAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        self.uploadImage(filePath: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: demoTextField.text?, description: demoTextView.text?)
+        self.uploadImage(localFile: getDocumentsDirectory().appendingPathComponent("screenshotCrop.png"), title: (demoTextField.text)!, description: (demoTextView.text)!)
     }
  
     @IBAction func closeAction(_ sender: Any) {
