@@ -27,8 +27,7 @@ The majority of us learned Swift over the weekend. We had never worked with Xcod
 * <p> <b>Google Cloud Platform</b> - We enjoyed using firebase as our database solution. Looking to integrate more Google components in the future.  </p>
 <p align = "center"><a href = "https://developer.apple.com/arkit/"><img src="/logos/GCP.png" width=300px></a></p>
 
-* <p> <b>Facebook API</b> - Facebook Login & Account Kit.
-Simple account creation with Facebook, phone number or email. No more passwords. </p>
+* <p> <b>Facebook API</b> - Facebook Login & Account Kit. We enabled simple login or account creation with Facebook, phone number or email. No more passwords. </p>
 <p align = "center"><a href = "https://developers.facebook.com"><img src="/logos/FBAPI.png" width=125px></a></p>
 
 ## Contributors and Maintainers
